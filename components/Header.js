@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -9,7 +9,16 @@ import {
   Alert,
 } from "react-native";
 
+import Profile from "./Profile";
+
 const Header = (props) => {
+  const [profileModal, setProfilModal] = useState(false);
+
+  const profileHomeHandler = () => {
+    setProfilModal(false);
+  };
+  console.log(profileModal);
+
   return (
     <View>
       <View style={styles.header}>
@@ -40,10 +49,12 @@ const Header = (props) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.profileButton}
-          onPress={() => Alert.alert("profile clicked")}
+          onPress={() => setProfilModal(true)}
+          onProfile={profileModal}
         >
           <Image source={require("./img/user.png")} />
         </TouchableOpacity>
+        <Profile visible={profileModal} profileHome={profileHomeHandler} />
       </View>
     </View>
   );

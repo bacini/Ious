@@ -14,8 +14,6 @@ const Daftar = (props) => {
   const [noHp, setNoHp] = useState("");
   const [password, setPassword] = useState("");
 
-  const [modeLogin, setModeLogin] = useState(false);
-
   return (
     <Modal visible={props.visible} animationType="slide">
       <View>

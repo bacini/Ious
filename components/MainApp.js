@@ -8,6 +8,16 @@ import {
   Modal,
 } from "react-native";
 
-const MainApp = () => {};
+import Header from "./Header";
+
+const MainApp = () => {
+  return (
+    <View>
+      <Header />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({});
+
+export default MainApp;

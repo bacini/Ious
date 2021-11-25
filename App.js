@@ -2,12 +2,12 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import Login from "./components/Login";
-import Daftar from "./components/Daftar";
+import MainApp from "./components/MainApp";
 
 export default function App() {
   return (
     <View>
-      <Login />
+      <MainApp />
     </View>
   );
 }

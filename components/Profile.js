@@ -10,8 +10,6 @@ import {
 } from "react-native";
 
 const Profile = (props) => {
-  console.log(props);
-
   return (
     <Modal visible={props.visible} animationType="slide">
       <View>

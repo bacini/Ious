@@ -17,7 +17,6 @@ const Header = (props) => {
   const profileHomeHandler = () => {
     setProfilModal(false);
   };
-  console.log(profileModal);
 
   return (
     <View>

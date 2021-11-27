@@ -12,7 +12,6 @@ const Rekomendasi = () => {
   const barangModalHandlerFalse = () => {
     setBarangModal(false);
   };
-  console.log(barangModal);
 
   return (
     <View>

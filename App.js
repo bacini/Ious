@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import Login from "./components/Login";
 import MainApp from "./components/MainApp";
+import Barang from "./components/Barang";
 
 export default function App() {
   return (

@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
+import Barang from "./Barang";
+
 const Rekomendasi = () => {
+  const [barangModal, setBarangModal] = useState(false);
+
+  const barangModalHandler = () => {
+    setBarangModal(true);
+  };
+  const barangModalHandlerFalse = () => {
+    setBarangModal(false);
+  };
+  console.log(barangModal);
+
   return (
     <View>
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={() => barangModalHandler()}>
           <View style={styles.element}>
             <Image
               style={styles.image}
@@ -51,6 +63,7 @@ const Rekomendasi = () => {
           </View>
         </TouchableOpacity>
       </View>
+      <Barang visible={barangModal} backModal={() => setBarangModal(false)} />
     </View>
   );
 };

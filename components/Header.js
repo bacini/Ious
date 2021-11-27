@@ -68,6 +68,8 @@ const styles = StyleSheet.create({
     paddingTop: 73,
     backgroundColor: "#CD5951",
     borderRadius: 35,
+    shadowColor: "#000",
+    elevation: 50,
   },
   textInputSearch: {
     position: "absolute",

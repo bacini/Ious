@@ -26,9 +26,9 @@ const Profile = (props) => {
           <View style={styles.profileContainer}>
             <Image
               style={styles.profilePicture}
-              source={require("./img/dummy/dummy-profile.png")}
+              source={require("./img/dummy/hecker.jpg")}
             />
-            <Text style={styles.nama}>Bagas Prasetya</Text>
+            <Text style={styles.nama}>Hecker</Text>
             <TouchableOpacity style={styles.edit} onPress={() => {}}>
               <Image source={require("./img/edit.png")} />
             </TouchableOpacity>

@@ -10,16 +10,17 @@ import {
 } from "react-native";
 
 import Profile from "./Profile";
+import Keranjang from "./Keranjang";
 
 const HeaderBarang = (props) => {
-  const [profileModal, setProfilModal] = useState(false);
+  const [profileModal, setProfileModal] = useState(false);
+  const [keranjangModal, setKeranjangModal] = useState(false);
 
   const profileHomeHandler = () => {
-    setProfilModal(false);
+    setProfileModal(false);
   };
-
-  const barangHomeHandlerFalse = () => {
-    setBarangModal(false);
+  const keranjangHomeHandler = () => {
+    setKeranjangModal(false);
   };
 
   return (
@@ -53,13 +54,13 @@ const HeaderBarang = (props) => {
 
           <TouchableOpacity
             style={styles.keranjangButton}
-            onPress={() => Alert.alert("keranjang clicked")}
+            onPress={() => setKeranjangModal(true)}
           >
             <Image source={require("./img/shopping-cart.png")} />
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.profileButton}
-            onPress={() => setProfilModal(true)}
+            onPress={() => setProfileModal(true)}
             onProfile={profileModal}
           >
             <Image source={require("./img/user.png")} />
@@ -67,6 +68,10 @@ const HeaderBarang = (props) => {
         </View>
 
         <Profile visible={profileModal} profileHome={profileHomeHandler} />
+        <Keranjang
+          visible={keranjangModal}
+          keranjangHome={keranjangHomeHandler}
+        />
       </View>
     </View>
   );
